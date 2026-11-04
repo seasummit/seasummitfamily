@@ -252,6 +252,7 @@ section{padding:84px 0}
 .about{background:var(--river);color:#d9e6e1}
 .about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
 .about h2{color:#fff}
+.about .me{width:220px;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:20px;margin:8px 0 26px;box-shadow:0 0 0 6px rgba(227,155,59,.35)}
 .about blockquote{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.1;letter-spacing:-.02em;color:var(--ember);border-left:4px solid var(--ember);padding-left:22px;margin-top:10px}
 .about p+p{margin-top:14px}
 /* automations */
@@ -321,12 +322,16 @@ footer .fine{font-size:.82rem}
  <symbol id="logo" viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#123f3b"/><path d="M8 31 19 13l6.5 10 3.5-5L40 31" fill="none" stroke="#fff" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M7 37.5c3.2-2.6 6.4-2.6 9.6 0s6.4 2.6 9.6 0 6.4-2.6 9.6 0 4.2 1.4 5.2.6" fill="none" stroke="#e39b3b" stroke-width="3.2" stroke-linecap="round"/></symbol>
  <symbol id="logoB" viewBox="0 0 48 48"><circle cx="34" cy="12" r="4.5" fill="#e39b3b"/><path d="M4 33 17 11l7 11 4-6 12 17" fill="none" stroke="#123f3b" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/><path d="M4 40c3.3-2.7 6.7-2.7 10 0s6.7 2.7 10 0 6.7-2.7 10 0 6.7 2.7 10 0" fill="none" stroke="#5f7f3a" stroke-width="3.4" stroke-linecap="round"/></symbol>
  <symbol id="logoC" viewBox="0 0 48 48"><circle cx="24" cy="24" r="23" fill="#e39b3b"/><path d="M9 30 21 13l6 8.5 3.5-4.5L39 30z" fill="#123f3b"/><path d="M6.5 33.5c3-2.3 5.8-2.3 8.8 0s5.8 2.3 8.8 0 5.8-2.3 8.8 0 5.8 2.3 8.8 0" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/><path d="M10 39c2.6-2 5-2 7.6 0s5 2 7.6 0 5-2 7.6 0" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/></symbol>
+ <symbol id="logoD" viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#123f3b"/><path d="M11 29a13 13 0 0 1 26 0z" fill="#e39b3b"/><path d="M24 9v4M12.7 13.7l2.8 2.8M35.3 13.7l-2.8 2.8M7 23h4M37 23h4" stroke="#e39b3b" stroke-width="2.6" stroke-linecap="round"/><path d="M6 33.5c3-2.4 6-2.4 9 0s6 2.4 9 0 6-2.4 9 0 6 2.4 9 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M10 39.5c2.7-2 5.3-2 8 0s5.3 2 8 0 5.3-2 8 0" fill="none" stroke="#9fc2b6" stroke-width="3" stroke-linecap="round"/></symbol>
+ <symbol id="logoE" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21.5" fill="none" stroke="#123f3b" stroke-width="3"/><path d="M13 27a11 11 0 0 1 22 0" fill="#e39b3b"/><path d="M5 27h38" stroke="#123f3b" stroke-width="3" stroke-linecap="round"/><path d="M9.5 33c2.4-1.9 4.8-1.9 7.2 0s4.8 1.9 7.2 0 4.8-1.9 7.2 0 4.8 1.9 7.2 0" fill="none" stroke="#5f7f3a" stroke-width="2.8" stroke-linecap="round"/></symbol>
+ <symbol id="logoF" viewBox="0 0 48 48"><rect width="48" height="48" rx="24" fill="#e39b3b"/><path d="M8 30c4-9 10-14 16-14s12 5 16 14" fill="none" stroke="#123f3b" stroke-width="3.4" stroke-linecap="round"/><circle cx="24" cy="10.5" r="3.4" fill="#123f3b"/><path d="M7 36c3.4-2.6 6.8-2.6 10.2 0s6.8 2.6 10.2 0 6.8-2.6 10.2 0 4 1.4 4.6.9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></symbol>
 </svg>
 
 <div id="pick" style="position:relative;z-index:50;background:#fff4d6;color:#3a2306;padding:10px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;font-size:.95rem;border-bottom:1px solid #f0dca0"><b>Preview only, not live.</b> Pick a logo:
 <button data-l="logo" style="font:inherit;padding:6px 12px;border-radius:999px;border:2px solid #123f3b;background:#fff;display:flex;gap:6px;align-items:center;cursor:pointer"><svg width="26" height="26"><use href="#logo"/></svg>A</button>
 <button data-l="logoB" style="font:inherit;padding:6px 12px;border-radius:999px;border:2px solid #cbb;background:#fff;display:flex;gap:6px;align-items:center;cursor:pointer"><svg width="26" height="26"><use href="#logoB"/></svg>B</button>
-<button data-l="logoC" style="font:inherit;padding:6px 12px;border-radius:999px;border:2px solid #cbb;background:#fff;display:flex;gap:6px;align-items:center;cursor:pointer"><svg width="26" height="26"><use href="#logoC"/></svg>C</button></div>
+<button data-l="logoC" style="font:inherit;padding:6px 12px;border-radius:999px;border:2px solid #cbb;background:#fff;display:flex;gap:6px;align-items:center;cursor:pointer"><svg width="26" height="26"><use href="#logoC"/></svg>C</button>
+<button data-l="logoD" style="font:inherit;padding:6px 12px;border-radius:999px;border:2px solid #cbb;background:#fff;display:flex;gap:6px;align-items:center;cursor:pointer"><svg width="26" height="26"><use href="#logoD"/></svg>D</button><button data-l="logoE" style="font:inherit;padding:6px 12px;border-radius:999px;border:2px solid #cbb;background:#fff;display:flex;gap:6px;align-items:center;cursor:pointer"><svg width="26" height="26"><use href="#logoE"/></svg>E</button><button data-l="logoF" style="font:inherit;padding:6px 12px;border-radius:999px;border:2px solid #cbb;background:#fff;display:flex;gap:6px;align-items:center;cursor:pointer"><svg width="26" height="26"><use href="#logoF"/></svg>F</button></div>
 <script>document.querySelectorAll('#pick button').forEach(function(btn){btn.onclick=function(){var l=btn.dataset.l;document.querySelectorAll('.brand use').forEach(function(u){u.setAttribute('href','#'+l)});document.querySelectorAll('#pick button').forEach(function(x){x.style.borderColor=x===btn?'#123f3b':'#cbb'})}})</script>
 <header class="top">
  <div class="wrap">
@@ -399,6 +404,7 @@ footer .fine{font-size:.82rem}
  <div class="wrap">
   <div>
    <h2>About Sea Summit Solutions</h2>
+   <img class="me" src="/img/image.jpg" width="768" height="1024" alt="John Young, owner of Sea Summit Solutions" loading="lazy">
    <blockquote>You deal with me, not a call center.</blockquote>
   </div>
   <div>
